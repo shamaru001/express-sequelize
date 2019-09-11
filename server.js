@@ -10,10 +10,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 //parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(postRoutes);    
+app.use(postRoutes);
 modelPost(db.sequelize);
 
-app.db = db;
 
 // db.sequelize.sync().then(() => {
 //     // populate author table with dummy data
